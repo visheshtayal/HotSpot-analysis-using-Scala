@@ -41,14 +41,7 @@ Example:
 
 test/output hotzoneanalysis src/resources/point-hotzone.csv src/resources/zone-hotzone.csv hotcellanalysis src/resources/yellow_tripdata_2009-01_point.csv
 
-Note:
-
-The number/order of tasks do not matter.
-
-But, the first 7 of our final test cases will be hot zone analysis, the last 8 will be hot cell analysis.
-
-Input data format
-The main function/entrace is "cse512.Entrance" scala file.
+#Input data format
 
 1. Point data: the input point dataset is the pickup point of New York Taxi trip datasets. The data format of this phase is the original format of NYC taxi trip which is different from Phase 2. But the coding template already parsed it for you. Find the data in the .zip file below.
 
@@ -60,11 +53,12 @@ Hot zone analysis
 
 The input point data can be any small subset of NYC taxi dataset.
 
-Hot cell analysis
+#Hot cell analysis
 
 The input point data is a monthly NYC taxi trip dataset (2009-2012) like "yellow_tripdata_2009-01_point.csv"
 
-Output data format
+#Output data format
+
 Hot zone analysis
 
 All zones with their count, sorted by "rectangle" string in an ascending order.
