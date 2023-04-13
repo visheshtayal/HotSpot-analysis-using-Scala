@@ -28,3 +28,51 @@ To reduce the computation power need, we made the following changes:
 4. You only need to consider Pick-up Location.
 
 5. We don't use Jaccard similarity to check your answer. However, you don't need to worry about how to decide the cell coordinates because the code template generated cell coordinates. You just need to write the rest of the task.
+
+Coding template specification
+Input parameters
+Output path (Mandatory)
+
+Task name: "hotzoneanalysis" or "hotcellanalysis"
+
+Task parameters: (1) Hot zone (2 parameters): nyc taxi data path, zone path(2) Hot cell (1 parameter): nyc taxi data path
+
+Example:
+
+test/output hotzoneanalysis src/resources/point-hotzone.csv src/resources/zone-hotzone.csv hotcellanalysis src/resources/yellow_tripdata_2009-01_point.csv
+
+Note:
+
+The number/order of tasks do not matter.
+
+But, the first 7 of our final test cases will be hot zone analysis, the last 8 will be hot cell analysis.
+
+Input data format
+The main function/entrace is "cse512.Entrance" scala file.
+
+1. Point data: the input point dataset is the pickup point of New York Taxi trip datasets. The data format of this phase is the original format of NYC taxi trip which is different from Phase 2. But the coding template already parsed it for you. Find the data in the .zip file below.
+
+yellow_tripdata_2009-01_point.csv
+
+2. Zone data (only for hot zone analysis): at "src/resources/zone-hotzone" of the template
+
+Hot zone analysis
+
+The input point data can be any small subset of NYC taxi dataset.
+
+Hot cell analysis
+
+The input point data is a monthly NYC taxi trip dataset (2009-2012) like "yellow_tripdata_2009-01_point.csv"
+
+Output data format
+Hot zone analysis
+
+All zones with their count, sorted by "rectangle" string in an ascending order.
+
+Hot cell analysis
+
+The coordinates of top 50 hotest cells sorted by their G score in a descending order. Note, DO NOT OUTPUT G score.
+
+-7399,4075,15
+-7399,4075,29
+-7399,4075,22
